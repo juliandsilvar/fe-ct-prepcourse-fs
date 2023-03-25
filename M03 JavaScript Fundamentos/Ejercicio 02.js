@@ -5,8 +5,8 @@ function devolverString(string) {
    // Debe retornar un string.
    // Tu código:
    console.log("Ingrese el texto requerido");
-   var str;
-   return str;
+   var string;
+   return string;
 }
 
 // ⛔️ "X" e "Y" son números.
