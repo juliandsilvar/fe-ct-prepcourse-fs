@@ -85,12 +85,19 @@ function promedioResultadosTest(resultadosTest) {
    // El parámetro "resultadosTest" es un arreglo de números.
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
+   var i=0, suma=0;
+   while(i<resultadosTest.length){
+      suma=suma+resultadosTest[i++];
+   }
+   return suma/resultadosTest.length;
 }
 
 function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+   var m=Math.max.apply(null, arrayOfNums);
+   return m;
 }
 
 function multiplicarArgumentos() {
@@ -98,6 +105,20 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var aux=1;
+   if(arguments.length>=2){
+      for(var i=0;i<arguments.length;i++){
+         aux=arguments[i]*aux;
+      }
+      return aux;
+   }else if(arguments.length=1)
+   {
+      return arguments;
+   }
+   else
+   {
+      return "0";
+   }
 }
 
 function cuentoElementos(array) {
