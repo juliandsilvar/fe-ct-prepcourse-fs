@@ -105,13 +105,17 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   var array=new Array;
+   array=arguments;
    var aux=1;
    if(arguments.length>=2){
-      for(var i=0;i<arguments.length;i++){
+      for(var i=0;i<arguments.length;i++)
+      {
          aux=arguments[i]*aux;
       }
       return aux;
-   }else if(arguments.length=1)
+   }
+   else if(arguments.length=1)
    {
       return arguments;
    }
