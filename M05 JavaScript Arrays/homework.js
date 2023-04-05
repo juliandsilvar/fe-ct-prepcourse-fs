@@ -198,12 +198,18 @@ function mesesDelAño(array) {
    if(meses.length<3){
       return "No se encontraron los meses pedidos";
    } else return meses;
-}
+   }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var tabla=[];
+   var i=0;
+   for(var i=0;i<11;i++){
+      tabla.push(6*i);
+   }
+   return tabla;
 }
 
 function mayorACien(array) {
@@ -231,6 +237,8 @@ function breakStatement(num) {
    // Tu código:
    var arr=[];
    var suma=num;
+   var i=1;
+   var bool=false;
    for(var i=0;i<10;i++){
       suma=suma+2;
       if(suma===i){
@@ -243,9 +251,17 @@ function breakStatement(num) {
       return "Se interrumpió la ejecución";
    }
    else return arr;
-   /*while (condition) {
-      
-   }*/
+   /*while(i<=10){
+      suma+=2;
+      if(suma===i){
+         bool=true;
+         break;
+      }
+      arr.push(suma);
+      i++;
+   }
+   if(bool=true)return "Se interrumpió la ejecución";
+   return arr;*/
 }
 
 function continueStatement(num) {
