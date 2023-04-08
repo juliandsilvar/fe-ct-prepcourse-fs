@@ -8,8 +8,8 @@ function crearGato(nombre, edad) {
    // Retornar el objeto.
    // Tu código:
    var gato={
-      nombre:,
-      edad:,
+      nombre:nombre,
+      edad:edad,
       meow:function(meow){
          return "Meow!";
       },
@@ -23,9 +23,9 @@ function nuevoUsuario(nombre, email, password) {
    // Retornar el objeto.
    // Tu código:
    var usuario={
-      nombre:[],
-      email:[],
-      password:[]
+      nombre:nombre,
+      email:email,
+      password:password
    }
 }
 
