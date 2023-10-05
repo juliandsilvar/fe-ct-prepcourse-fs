@@ -95,7 +95,8 @@ function esVocal(letra) {
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
    console.log("Ingrese una letra para determinar si es vocal");
-  var letra;
+  var letra=letra.toLowerCase();
+  console.log(letra);
   if(letra==="a"){
     return "Es vocal";
   }if(letra==="e"){
