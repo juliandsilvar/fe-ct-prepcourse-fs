@@ -56,23 +56,29 @@ function esPar(num) {
    // De lo contrario, retorna false.
    // Tu código:
    console.log("Ingrese un numero para saber si es par");
-   var num;
+   /*var num;
    if(num%2===0){
       return true;
    }
-   return false;
+   return false;*/
+   var residuo=num%2;
+   if(residuo===0) return true;
+   else return false;
 }
 
 function esImpar(num) {
    // Retorna true si "num" es impar.
    // De lo contrario, retorna false.
    // Tu código:
-   console.log("Ingrese un numero para saber si es par");
+   /*console.log("Ingrese un numero para saber si es par");
    var num;
    if(num%2!==0){
       return true;
    }
-   return false;
+   return false;*/
+   var resultado=esPar(num)
+   if(resultado===false)return true;
+   else return false;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

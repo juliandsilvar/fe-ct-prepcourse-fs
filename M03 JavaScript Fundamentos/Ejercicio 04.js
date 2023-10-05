@@ -14,8 +14,6 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
    // Retorna el valor de "num" elevado al cubo.
    // Tu código:
-   console.log("ingrese un numero para elevar al cubo");
-   var num;
    return Math.pow(num, 3);
 }
 
