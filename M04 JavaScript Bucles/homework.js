@@ -75,6 +75,13 @@ function colors(color) {
    }if(color==="orange"){
       return "This is orange";
    }else return "Color not found";
+   /*switch(color){
+      case ("blue" || "red" || "green" || "orange"):
+         return "This is " + color;
+         break;
+         default:
+            return "Color not found;"
+   }*/
 }
 
 function esDiezOCinco(num) {
