@@ -26,17 +26,25 @@ function mayoriaDeEdad(edad) {
 
 function conection(status) {
    // El argumento "status" representa el estado de conexión de un usuario.
-   // Si el estado es igual a 1, el usuario está "Online".
+   // Si el estado es igual a 1, el usuario está "cc".
    // Si el estado es igual a 2, el usuario está "Away".
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
    // Tu código:
    var status;
-  if(status===1){
+  /*if(status===1){
     return "Online";
   }if(status===2){
     return "Away";
-  }else return "Offline";
+  }else return "Offline";*/
+  switch(status){
+   case 1:
+      return "Online";
+   case 2:
+      return "Away";
+   default:
+      return "Offline";
+  }
 }
 
 function saludo(idioma) {
@@ -47,13 +55,26 @@ function saludo(idioma) {
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
    var idioma;
-   if(idioma==="aleman"){
+   switch(idioma){
+      case "aleman":
+         return "Guten Tag!";
+         break;
+      case "mandarin":
+         return "Ni Hao!";
+         break;
+      case "ingles":
+         return "Hello!";
+         break;
+      default:
+         return "Hola!";
+   }
+   /*if(idioma==="aleman"){
       return "Guten Tag!";
    }if(idioma==="mandarin"){
       return "Ni Hao!";
    }if(idioma==="ingles"){
       return "Hello!"
-   }else return "Hola!";
+   }else return "Hola!";*/
 }
 
 function colors(color) {
@@ -66,6 +87,7 @@ function colors(color) {
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
    var color;
+   /* metodo 1
    if(color==="blue"){
       return "This is blue";
    }if(color==="red"){
@@ -74,15 +96,27 @@ function colors(color) {
       return "This is green";
    }if(color==="orange"){
       return "This is orange";
-   }else return "Color not found";
-   /*switch(color){
-      case ("blue" || "red" || "green" || "orange"):
-         return "This is " + color;
-         break;
-         default:
-            return "Color not found;"
+   }else return "Color not found";*/
+   switch(color){
+      /*case "blue":
+         return "This is blue";
+      case "red":
+         return "This is red";
+      case "green":
+         return "This is green"
+      case "orange":
+         return "This is orange"
    }*/
-}
+      case "blue":
+      case "red":
+      case "green":
+      case "orange":
+         return "This is " + color + "";
+         break;
+      default:
+         return "Color not found";
+      }
+   }
 
 function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
@@ -99,9 +133,10 @@ function estaEnRango(num) {
    // De lo contrario, retornar false.
    // Tu código:
    var num;
-   if(num>20&&num<50){
+   /*if(num>20&&num<50){
       return true;
-   }else return false
+   }else return false*/
+   return num<50&&num>20?true:false;
 }
 
 function esEntero(num) {
@@ -112,12 +147,17 @@ function esEntero(num) {
    // De lo contrario, retorna false.
    // Tu código:
    var num;
+   //Metodo 1
    //if(num.isInteger(num)){
    //   return true;
    //}else return false;
+   /*Metodo 2
    if(num===Math.floor(num)){
       return true;
-   }else return false;
+   }else return false;*/
+   if(num%1===0){
+      return true;
+   }return false;
 }
 
 function fizzBuzz(num) {
