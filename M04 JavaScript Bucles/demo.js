@@ -17,14 +17,14 @@ console.log(suma);
 
 //? El for en una funcion:
 
-function suma(numInicial, numFinal) {
+function sumas(numInicial, numFinal) {
   var suma = 0;
   for (var i = numInicial; i <= numFinal; i++) {
     suma = suma + i;
   }
   return suma;
 }
-var result = suma(1, 6);
+var result=sumas(1, 6); 
 console.log(result);
 
 //? Una funcion mas, for con condicional:
@@ -40,7 +40,7 @@ function sumaPar(numInicial, numFinal) {
   return suma;
 }
 var result = sumaPar(1, 3);
-//console.log(result);
+//console.log(result); //2
 
 //? For para recorrer un string
 

@@ -115,8 +115,8 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   var max=Math.max.apply(null, arrayOfNums);
-   return max;
+   //var max=Math.max.apply(null, arrayOfNums);
+   return Math.max.apply(null, arrayOfNums);
    /*
    var max=arrayOfNums[0];
    for(var i=1;i<arrayOfNums.length;i++){
@@ -143,13 +143,20 @@ function multiplicarArgumentos() {
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
+   // Metodo for
    var contador=0;
-   for(var i=0;i<array.length;i++){
+   /*for(var i=0;i<array.length;i++){
       if(array[i]>18){
          contador++;
       }
    }
    return contador;
+   */
+  // metodo if filter
+  var filtro=array.filter(function(elem){
+   return elem>18;
+  });
+  return filtro.length;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -157,10 +164,11 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-   if(numeroDeDia===1||numeroDeDia===7){
+   if(numeroDeDia<1||numeroDeDia>7){
+      return "numero invalido"
+   } else if(numeroDeDia===1||numeroDeDia===7){
       return "Es fin de semana";
-   }
-   else return "Es dia laboral";
+   }else return "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
