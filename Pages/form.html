@@ -1,0 +1,26 @@
+<!--
+Author: Julian David Silva Rueda
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form method="post" action="mailto:juliandsilvar@gmail.com" enctype="multipart/form-data">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" value="text" required />
+
+        <label for="correo">Correo electronico</label>
+        <input type="email" name="correo" id="correo" value="text" required />
+
+        <label for="mensaje">Añade un mensaje</label>
+        <textarea name="mensaje" rows="5" cols="35" id="mensaje" required></textarea>
+
+        <input type="submit" id="enviar" name="enviar" value="Enviar" required />
+        <input type="reset" id="borrar" name="borrar" value="Borrar" required />
+    </form>
+</body>
+</html>
