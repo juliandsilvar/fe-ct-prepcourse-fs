@@ -15,7 +15,33 @@ function sumaLosMultiplosDeTres(numeros) {
     TIP: Recordá que los números múltiplos de 3 son aquellos que divididos por 3 dan resto 0 (cero) y se puede validar con el operador %. */
 
     // Tu código aquí
-}
+    // Verifica si el arreglo esta vacio
+    if(numeros.length===0){
+        return "El arreglo está vacío";
+    }
+    // Inicializar la suma
+    let suma=0;
 
+    // Variable para verificar si se encontraron números múltiplos de 3
+    let seEncontraronMultiplos = false;
+
+    // Iterar sobre el arreglo
+    for(let i=0;i<numeros.length;i++){
+        // Verificar si el número es múltiplo de 3
+        if(numeros[i]%3===0){
+            // Sumar al total
+            suma+=numeros[i];
+            // Indicar que se encontro al menos un multiplo de 3
+            seEncontraronMultiplos=true;
+        }
+    }
+    // Verificar si se encontraron números múltiplos de 3
+    if(!seEncontraronMultiplos){
+        return "No se encontraron números múltiplos de 3";
+    }else{
+        // Retornar la suma total
+        return suma;
+    }
+}
 // ! No modifiques nada debajo de esta línea
-module.exports = { sumaLosMultiplosDeTres };
+module.exports={sumaLosMultiplosDeTres};
