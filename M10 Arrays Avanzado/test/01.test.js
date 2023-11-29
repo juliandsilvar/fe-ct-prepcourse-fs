@@ -1,4 +1,4 @@
-const { sumaLosMultiplosDeTres } = require('./index.js');
+const { sumaLosMultiplosDeTres } = require('../index.js');
 
 const normalize = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
